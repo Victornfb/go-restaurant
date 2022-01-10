@@ -1,8 +1,8 @@
-import { Component, useEffect, useState } from 'react';
+import { Component, ReactNode, useEffect, useState } from 'react';
 import ReactModal from 'react-modal';
 
 interface ModalProps {
-  children: ReactModal;
+  children: ReactNode;
   isOpen: boolean;
   setIsOpen: () => void;
 }

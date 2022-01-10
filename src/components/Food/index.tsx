@@ -1,22 +1,14 @@
 import { Component, useState } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
+import { IFood } from '../../@types/types'
 
 import { Container } from './styles';
 import api from '../../services/api';
 
-interface Food {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-  available: boolean;
-}
-
 interface FoodProps {
-  food: Food;
+  food: IFood;
   handleDelete: (value: number) => void;
-  handleEditFood: (value: Food) => void;
+  handleEditFood: (value: IFood) => void;
 }
 
 export function Food(props: FoodProps) {
